@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+ <html>
+	<head>
+		<title> Signup </title>
+		<style type="text/css">
+		
+		input[type="text"],[type="password"],[type="confirmpassword"],[type="number_format"]{
+		width:300px;
+		height:30px;
+		font-size:17px;
+		margin-top:10px;
+		margin-bottom:10px;
+		padding-left:30px;
+		background:#fff;
+		border:20px;
+		border-radius:15px;
+		padding-top:5px;
+		}
+		input[type="button"]{
+		border:none;
+		border-radius:5px;
+		border-bottom:15px ;
+		padding:10px 20px;
+		background:red;
+		cursor:pointer;
+		}
+		</style>
+		
+	<script type="text/javascript">
+	function check(){
+		var flag=true;
+		if(document.forms[0].user_name.value==""){
+			flag=false;
+			alert("You can not name Empty !");
+		}
+		else if(document.forms[0].user_email.value==""){
+			flag=false;
+			alert("You can not email Empty !");
+		}
+		else if(document.forms[0].user_password.value==""){
+			flag=false;
+			alert("You can not password Empty !");
+		}
+		else if(document.forms[0].confirmpassword.value==""){
+			flag=false;
+			alert("You can not confirmpassword Empty !");
+		}
+		else if(document.forms[0].user_type.value==""){
+			flag=false;
+			alert("You can not type Empty !");
+		}
+		else if(document.forms[0].user_contact_no.value==""){
+			flag=false;
+			alert("You can not contact Empty !");
+		}
+		else if(document.forms[0].user_address.value==""){
+			flag=false;
+			alert("You can not address Empty !");
+		}
+		else if(document.forms[0].shipping_address.value==""){
+			flag=false;
+			alert("You can not shippingaddress Empty !");
+		}
+		
+		if(flag==true){
+		document.forms[0].submit();
+	}
+	}
+	</script>
+	</head>
+    <body background="wheat2.jpg" style ="background-size:cover"></br>  
+	<h1 style="text-align:center;" style="font-size:300%" style="color:black;">Sign up</h1>
+	<h3 id="h3" style="text-align:center;" style="font-size:300%" style="color:blue;"></h3>
+
+    <div class="form"> 
+        <form action="signup.php" method="POST" style="text-align:center;"></br></br> 
+            <div class="form-input">
+				<input type="text" placeholder="please enter your name" name="user_name"/>
+			</div>
+			<div class="form-input">
+				<input type="text" placeholder="please enter your e-mail" name="user_email"/>
+			</div>
+			<div class="form-input">
+				<input type="password" placeholder="please enter your password" name="user_password"/>
+			</div>
+			<div class="form-input">
+				<input type="password" placeholder="please confirm your password" name="confirmpassword"/>
+			</div>
+			<div class="form-input">
+				<input type="text" placeholder="please enter your type" name="user_type"/>
+			</div>
+			<div class="form-input">
+				<input type="text" placeholder="please enter your contact no" name="user_contact_no"/>
+			</div>
+			<div class="form-input">
+				<input type="text" placeholder="please enter your address" name="user_address"/>
+			</div>
+			<div class="form-input">
+				<input type="text" placeholder="please enter your shipping address" name="shipping_address"/>
+			</div>
+				<input type= "button" value= "Signup" onclick="check()"/></br></br>
+                <a href="signin.html">Already have an account ?</a>
+		</form>
+    </div>
+    </body>
+</html>
